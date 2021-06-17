@@ -3,7 +3,7 @@
 
     <groupId>com.demo.dubbo</groupId>
     <artifactId>dubbo-demo</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <modules>
         <module>dubbo-provider</module>
         <module>dubbo-consumer</module>
@@ -139,6 +139,6 @@
         <!--可以在浏览器中访问的scm地址-->
         <!--<url>https://github.com/FutaoSmile/starter-fustack</url>-->
         <!--设置tagName-->
-        <tag>dubbo-demo-1.0</tag>
+        <tag>v-release-0.0.1</tag>
     </scm>
 </project>
