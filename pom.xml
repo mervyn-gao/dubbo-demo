@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.demo.dubbo</groupId>
     <artifactId>dubbo-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <modules>
         <module>dubbo-provider</module>
         <module>dubbo-consumer</module>
@@ -102,10 +101,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
                 <configuration>
                     <!--<tagBase>https://github.com/FutaoSmile/starter-fustack</tagBase>-->
                     <!--是否自动为子模块分配父版本。如果设置为false，将提示用户输入每个子模块的版本。-->
                     <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <!--<checkModificationExcludeList>.iml</checkModificationExcludeList>-->
+                    <checkModificationExcludes>
+                        <checkModificationExclude>**/*.iml</checkModificationExclude>
+                        <checkModificationExclude>pom.xml</checkModificationExclude>
+                    </checkModificationExcludes>
                     <!--tag标签名-->
                     <tagNameFormat>dubbo-demo-${version}</tagNameFormat>
                 </configuration>
@@ -134,6 +139,6 @@
         <!--可以在浏览器中访问的scm地址-->
         <!--<url>https://github.com/FutaoSmile/starter-fustack</url>-->
         <!--设置tagName-->
-        <tag>v-release-0.0.1</tag>
+        <tag>dubbo-demo-1.0</tag>
     </scm>
 </project>
